@@ -208,14 +208,21 @@ const solarSystem = [
     
     // 2. Console.log the eccentricity of Venus
     
-    
+    console.log(system.venus.eccentricity);
     // 3. Console.log the sum of the number of satellites of Jupiter, Saturn, Uranus, and Neptune (131)
     
-    
+    let sum =parseInt(system.jupiter.satellites) +parseInt(system.saturn.satellites) +parseInt(system.uranus.satellites) +parseInt(system.neptune.satellites);
+    console.log(sum);
     // 4. Write a conditional that checks if Mercury's radiusp is a string (remember the typeof command). If Mercury's radiusp is a string, change the value to be the same as its radiuse value. (radiusp is radius at the poles, radiuse is radius at the equator).
-    
+    if(typeof system.mercury.radiusp ==="string"){
+        system.mercury.radiusp = system.mercury.radiuse;
+    }
     
     // 5. Console.log Mercury's radiusp (should be 2439, not 'same').
-    
+    console.log(system.mercury.radiuse);
     
     // 6. Find the difference between Jupiter's momentum and Pluto's momentum. (To get momentum, you'll want the product of velocity and mass).
+    let jupiterMomentum = system.jupiter.mass * system.jupiter.velocity;
+    let plutoMomentum = system.pluto.mass * system.pluto.velocity;
+    let diffMomentum = jupiterMomentum - plutoMomentum;
+    console.log(diffMomentum);
